@@ -127,11 +127,57 @@ groceries.push('bread')
 
 
 
-//person2
-const person2 = {
-  name: 'juliana',
-  age: 31
+
+//const person2 = {
+ // name: 'Juliana',
+ // shirt: 'black'
+//}
+
+//console.log(person2)
+//console.log(person2.name)
+//console.log(person2.shirt)
+
+//arrow function (2 arguments)
+//object
+//template literals
+
+const introducer = (name, shirt) => {
+  const person = {
+    name: name,
+    shirt: shirt,
+    assets: 100000,
+    liabilities: 50000,
+    //netWorth deve ser uma função pq se colocar a operação de subtração diretamente ele não consegue pegar os valor de assets e liabilities, vai dar erro como se não tivesse sido declarado ainda já que estão sendo declaradas ao mesmo tempo
+    netWorth: function (){
+      return this.assets - this.liabilities
+    }
+  }
+
+  const intro = `Hi, my name is ${person.name} and the color of my shirt is ${person.shirt} and my net worth is $${person.netWorth()} USD`
+
+  return intro
 }
 
-console.log(person2.name)
-console.log(person2.age)
+// console.log(introducer('Juliana','black'))
+
+//LOOPS
+
+const fruits = ['bananas', 'apples', 'oranges', 'pear','bananas', 'apples', 'oranges', 'pear']
+//console.log(fruits[0])
+//console.log(fruits[1])
+//console.log(fruits[2])
+//console.log(fruits[3])
+
+//for (let i=0; i < fruits.length; i++){
+//  console.log(i ,fruits[i])
+//}
+
+//for(const fruit of fruits) {
+//  console.log(fruit)
+//}
+
+
+
+
+
+
